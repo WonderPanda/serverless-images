@@ -3,7 +3,11 @@
     "sourceMap": true,
     "lib": [
       "es5",
-      "es2015.promise"
-    ]
-  }
+      "es2015.promise",
+      "esnext.asynciterable"
+    ],
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }
