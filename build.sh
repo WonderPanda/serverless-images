@@ -15,17 +15,17 @@ if [ $# -eq 0 ]; then
   instruction
   exit 1
 elif [ "$1" = "int-test" ] && [ $# -eq 1 ]; then
-  yarn
+  npm install
 
-  yarn run integration-test
+  npm run integration-test
 elif [ "$1" = "acceptance-test" ] && [ $# -eq 1 ]; then
-  yarn
+  npm install
 
-  yarn run acceptance-test
+  npm run acceptance-test
 elif [ "$1" = "deploy" ] && [ $# -eq 2 ]; then
   STAGE=$2
 
-  yarn
+  npm install
   'node_modules/.bin/sls' deploy -s $STAGE
 else
   instruction
