@@ -2,6 +2,7 @@ import { APIGatewayEvent, Callback, Context, Handler } from 'aws-lambda';
 import { S3 } from 'aws-sdk';
 import fetch from 'node-fetch';
 import { basename } from 'path';
+import { ImageDimension, IResizeRequest } from './interfaces/IResizeRequest';
 
 const s3 = new S3();
 
